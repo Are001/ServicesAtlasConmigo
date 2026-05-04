@@ -1,0 +1,12 @@
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\bin\Debug\net8.0\AtlasLibraries.deps.json
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\bin\Debug\net8.0\AtlasLibraries.dll
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\bin\Debug\net8.0\AtlasLibraries.pdb
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.csproj.AssemblyReference.cache
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.AssemblyInfoInputs.cache
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.AssemblyInfo.cs
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.csproj.CoreCompileInputs.cache
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.dll
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\refint\AtlasLibraries.dll
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.pdb
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\ref\AtlasLibraries.dll

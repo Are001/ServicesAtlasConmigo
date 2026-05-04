@@ -1,0 +1,6 @@
+@ServicesAtlasConmigo_HostAddress = http://localhost:5049
+
+GET {{ServicesAtlasConmigo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
