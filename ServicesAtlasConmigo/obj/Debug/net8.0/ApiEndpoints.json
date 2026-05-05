@@ -1,15 +1,35 @@
 [
   {
     "ContainingType": "ServicesAtlasConmigo.Controllers.EjemploController",
-    "Method": "ObtenerAuto",
-    "RelativePath": "ejemplo",
+    "Method": "Get",
+    "RelativePath": "ejemploArray",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AtlasLibraries.Model.EjemplosModel, AtlasLibraries, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServicesAtlasConmigo.Controllers.EjemploController",
+    "Method": "ObtenerAutoObj",
+    "RelativePath": "ejemploObj",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "input",
-        "Type": "AtlasLibraries.Model.EjemplosModel",
+        "Name": "output",
+        "Type": "AtlasLibraries.Model.EjemploModelOutput",
         "IsRequired": true
       }
     ],

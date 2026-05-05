@@ -10,3 +10,4 @@ C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0
 C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\refint\AtlasLibraries.dll
 C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.pdb
 C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\ref\AtlasLibraries.dll
+C:\Users\areli\source\repos\ServicesAtlasConmigo\AtlasLibraries\obj\Debug\net8.0\AtlasLibraries.sourcelink.json

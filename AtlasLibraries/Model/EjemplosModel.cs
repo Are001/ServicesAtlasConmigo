@@ -16,4 +16,9 @@ namespace AtlasLibraries.Model
         public string Marca { get; set; }
         public string TipoMotor { get; set; }
     }
+
+    public class EjemploModelOutput : EjemplosModel 
+    { 
+        public int NumeroPuertas {  get; set; }
+    }
 }

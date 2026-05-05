@@ -5,8 +5,46 @@
     "version": "1.0"
   },
   "paths": {
-    "/ejemplo": {
+    "/ejemploArray": {
       "get": {
+        "tags": [
+          "Ejemplo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EjemplosModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EjemplosModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EjemplosModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ejemploObj": {
+      "post": {
         "tags": [
           "Ejemplo"
         ],
@@ -14,17 +52,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EjemplosModel"
+                "$ref": "#/components/schemas/EjemploModelOutput"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/EjemplosModel"
+                "$ref": "#/components/schemas/EjemploModelOutput"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/EjemplosModel"
+                "$ref": "#/components/schemas/EjemploModelOutput"
               }
             }
           }
@@ -181,6 +219,35 @@
   },
   "components": {
     "schemas": {
+      "EjemploModelOutput": {
+        "required": [
+          "modelo"
+        ],
+        "type": "object",
+        "properties": {
+          "modelo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "marca": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoMotor": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroPuertas": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "EjemplosModel": {
         "required": [
           "modelo"

@@ -1,6 +1,8 @@
 ﻿using AtlasLibraries.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
+using System.Reflection;
 
 namespace ServicesAtlasConmigo.Controllers
 {
@@ -8,31 +10,49 @@ namespace ServicesAtlasConmigo.Controllers
     [ApiController]
     public class EjemploController : ControllerBase
     {
-        [Route("ejemplo")]
+        public EjemploController()
+        {
+                      
+        }
+
+        [Route("ejemploArray")]
         [HttpGet]
         //intente traerlo con el HttpsGet
-        public IActionResult ObtenerAuto([FromBody] EjemplosModel  input) 
+        public ActionResult<List<EjemplosModel>> Get()
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(input);
+            var Ejemplo = new List<EjemplosModel>
+            {
+                new EjemplosModel{Modelo=2020, Color="rojo",Marca="Nissan", TipoMotor="Gasolina"},
+                new EjemplosModel{Modelo=2021, Color="rojo",Marca="Nissan", TipoMotor="Gasolina"},
+                new EjemplosModel{Modelo=2022, Color="rojo",Marca="Nissan", TipoMotor="Gasolina"}
+            };
+
+            return Ok(Ejemplo);
 
         }
 
+       
+
         [Route("ejemploObj")]
-        [HttpGet]
+        [HttpPost]
         //intente traerlo con el HttpsGet
-        public IActionResult ObtenerAutoObj([FromBody] EjemplosModel input)
+        public IActionResult ObtenerAutoObj([FromBody] EjemploModelOutput output)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(input);
+            //declaramos un  objeto
+            EjemploModelOutput salidaAuto = new EjemploModelOutput();
+            salidaAuto.NumeroPuertas = 4;
+           
+            return Ok(output);
 
         }
     }
