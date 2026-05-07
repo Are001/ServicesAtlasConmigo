@@ -1,4 +1,5 @@
 ﻿using AtlasLibraries.Model;
+using AtlasLibraries.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.SqlServer.Server;
@@ -13,9 +14,16 @@ namespace ServicesAtlasConmigo.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+        //Tipo                  -nombre de la variable 
+        public UsuarioServices _UsuarioServices;
+
+        public UsuarioController( UsuarioServices usuarioServicio)
+        {
+              this._UsuarioServices = usuarioServicio;
+        }
 
 
-        [Route("index")]
+       /* [Route("index")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -43,35 +51,31 @@ namespace ServicesAtlasConmigo.Controllers
              output.Edad = input.Edad; 
              output.CorreoElectronico = input.CorreoElectronico;
              output.Estatus = input.Estatus;*/
-            output.TodoElModelo = input;
+         //   output.TodoElModelo = input;
         
             //var outpuNombre = output.TodoElModelo.Nombre
 
-            return Ok(output);
+           // return Ok(output);
         
-        }
+        //}
 
         [Route("persona")]
         [HttpPost]
+        //Entrada
         public IActionResult MensajePersona([FromBody] PersonaModelInput input)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+           
 
-            DateTime Day = DateTime.Today;
-            //var age = Day.Year - input.FechaNacimiento.Year;
-            DateTime anio = DateTime.Parse(input.FechaNacimiento);
-            var age = Day.Year - anio.Year;
-            
-            
-            var mensaje = "Hola mi nombre es " + input.Nombre + " tengo " + age ;
-            //return Ok(mensaje);
-
-            var objPersona = new PersonalModelOutput();
-            objPersona.resultado = $"mensaje para el modelo de salida: {mensaje}"; /*asignamos a objPersona lo que tiene el mensaje*/
-            return Ok(objPersona);
+            var llamar = _UsuarioServices.CalcularAnios(input);
+            return Ok(llamar);
+           
         }
+
+        [Route("consultaUsuario")]
+        [HttpGet]
+        public IActionResult ConsultaUsurio() {
+             var output = _UsuarioServices.AllUsuarios();
+            return Ok(output);
+        }   
     }
 }

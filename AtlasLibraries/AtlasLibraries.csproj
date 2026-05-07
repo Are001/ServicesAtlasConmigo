@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Services\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
   </ItemGroup>
 

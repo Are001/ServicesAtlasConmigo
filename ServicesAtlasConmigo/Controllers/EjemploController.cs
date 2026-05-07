@@ -1,4 +1,5 @@
 ﻿using AtlasLibraries.Model;
+using AtlasLibraries.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
@@ -10,9 +11,11 @@ namespace ServicesAtlasConmigo.Controllers
     [ApiController]
     public class EjemploController : ControllerBase
     {
-        public EjemploController()
+        public EjemploServices ejemploServices;
+        public EjemploController(EjemploServices ejServicio )
         {
-                      
+            this.ejemploServices = ejServicio;
+      
         }
 
         [Route("ejemploArray")]
@@ -48,11 +51,7 @@ namespace ServicesAtlasConmigo.Controllers
                 return BadRequest(ModelState);
             }
 
-            //declaramos un  objeto
-            EjemploModelOutput salidaAuto = new EjemploModelOutput();
-            salidaAuto.NumeroPuertas = 4;
-           
-            return Ok(output);
+            return Ok(output);  
 
         }
     }

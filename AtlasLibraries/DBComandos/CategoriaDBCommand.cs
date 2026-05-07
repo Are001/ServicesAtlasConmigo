@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace AtlasLibraries.DBComandos
 {
-    public class UsuarioDBCommand
+    public class CategoriaDBCommand
     {
         private string _connectionString = "Server=ARELI;Database=dbPostres;User Id=sa;Password=123456;";
-
-        public DataTable sa_usuarios(string param)
+        public DataTable sa_categorias(string param)
         {
-            SqlCommand cmd = new SqlCommand("sa_usuarios");
+            SqlCommand cmd = new SqlCommand("sa_categorias");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@param", param);
 
@@ -58,6 +57,3 @@ namespace AtlasLibraries.DBComandos
         }
     }
 }
-
-
-    

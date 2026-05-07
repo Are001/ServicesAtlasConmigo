@@ -1,5 +1,45 @@
 [
   {
+    "ContainingType": "ServicesAtlasConmigo.Controllers.CategoriaController",
+    "Method": "AddCategorias",
+    "RelativePath": "addCategoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServicesAtlasConmigo.Controllers.CategoriaController",
+    "Method": "addCategoriaAll",
+    "RelativePath": "addCategoriaAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServicesAtlasConmigo.Controllers.CategoriaController",
+    "Method": "Categorias",
+    "RelativePath": "consultaAllCategorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServicesAtlasConmigo.Controllers.UsuarioController",
+    "Method": "ConsultaUsurio",
+    "RelativePath": "consultaUsuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ServicesAtlasConmigo.Controllers.EjemploController",
     "Method": "Get",
     "RelativePath": "ejemploArray",
@@ -37,32 +77,6 @@
   },
   {
     "ContainingType": "ServicesAtlasConmigo.Controllers.UsuarioController",
-    "Method": "Datos",
-    "RelativePath": "entrada",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "input",
-        "Type": "AtlasLibraries.Model.UsuarioModelInput",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServicesAtlasConmigo.Controllers.UsuarioController",
-    "Method": "Index",
-    "RelativePath": "index",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServicesAtlasConmigo.Controllers.UsuarioController",
     "Method": "MensajePersona",
     "RelativePath": "persona",
     "HttpMethod": "POST",
@@ -73,27 +87,6 @@
         "Name": "input",
         "Type": "AtlasLibraries.Model.PersonaModelInput",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServicesAtlasConmigo.Controllers.UsuarioController",
-    "Method": "ObtenerUsuario",
-    "RelativePath": "saludo",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Nombre",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Edad",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

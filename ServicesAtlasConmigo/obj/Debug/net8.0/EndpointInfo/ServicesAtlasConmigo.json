@@ -5,6 +5,42 @@
     "version": "1.0"
   },
   "paths": {
+    "/consultaAllCategorias": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/addCategoria": {
+      "post": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/addCategoriaAll": {
+      "post": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/ejemploArray": {
       "get": {
         "tags": [
@@ -74,78 +110,6 @@
         }
       }
     },
-    "/index": {
-      "get": {
-        "tags": [
-          "Usuario"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/saludo": {
-      "post": {
-        "tags": [
-          "Usuario"
-        ],
-        "parameters": [
-          {
-            "name": "Nombre",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Edad",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/entrada": {
-      "post": {
-        "tags": [
-          "Usuario"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioModelInput"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioModelInput"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioModelInput"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/persona": {
       "post": {
         "tags": [
@@ -170,6 +134,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/consultaUsuario": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -297,32 +273,6 @@
           "fechaNacimiento": {
             "minLength": 1,
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UsuarioModelInput": {
-        "required": [
-          "correoElectronico",
-          "nombre"
-        ],
-        "type": "object",
-        "properties": {
-          "nombre": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "correoElectronico": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "estatus": {
-            "type": "boolean"
-          },
-          "edad": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

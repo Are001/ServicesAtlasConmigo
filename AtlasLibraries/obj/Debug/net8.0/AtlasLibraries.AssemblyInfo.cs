@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtlasLibraries")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f56b48ccb200d4286ee711a4b6e5d3b21ab37518")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+977b1948704b7bea1469a82c61ac210e24d6813b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtlasLibraries")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtlasLibraries")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

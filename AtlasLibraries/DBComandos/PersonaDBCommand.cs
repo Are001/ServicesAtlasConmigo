@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AtlasLibraries.DBComandos
 {
-    public class UsuarioDBCommand
+    public class PersonaDBCommand
     {
         private string _connectionString = "Server=ARELI;Database=dbPostres;User Id=sa;Password=123456;";
 
@@ -58,6 +58,3 @@ namespace AtlasLibraries.DBComandos
         }
     }
 }
-
-
-    
