@@ -22,18 +22,25 @@
         "tags": [
           "Categoria"
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaModelInsertInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaModelInsertInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaModelInsertInput"
+              }
+            }
           }
-        }
-      }
-    },
-    "/addCategoriaAll": {
-      "post": {
-        "tags": [
-          "Categoria"
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -153,6 +160,18 @@
         }
       }
     },
+    "/AddUsuario": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -195,6 +214,27 @@
   },
   "components": {
     "schemas": {
+      "CategoriaModelInsertInput": {
+        "required": [
+          "descripcion",
+          "esActivo"
+        ],
+        "type": "object",
+        "properties": {
+          "descripcion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "esActivo": {
+            "type": "boolean"
+          },
+          "fechatRegistro": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EjemploModelOutput": {
         "required": [
           "modelo"

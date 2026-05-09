@@ -76,6 +76,14 @@ namespace ServicesAtlasConmigo.Controllers
         public IActionResult ConsultaUsurio() {
              var output = _UsuarioServices.AllUsuarios();
             return Ok(output);
-        }   
+        }
+
+        [Route("AddUsuario")]
+        [HttpPost]
+        public IActionResult AgregaUsuario()
+        {
+            var output = _UsuarioServices.AddUsuarios();
+            return Ok(output);
+        }
     }
 }

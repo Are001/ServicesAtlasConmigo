@@ -1,11 +1,14 @@
 ﻿using AtlasLibraries.DBComandos;
 using AtlasLibraries.Model;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http.Results;
 
 namespace AtlasLibraries.Services
 {
@@ -17,33 +20,31 @@ namespace AtlasLibraries.Services
         }
 
         //como el                                lo que resive del input
-        public List<CategoriaModelOutput> AllCategorias()
-        {
-            var AllCategorias = categoriaDBCommand.sa_categorias("<root><accion>C</accion><ST_FECHAREGISTRO></ST_FECHAREGISTRO></root>");
+        public object AllCategorias()
+        //public List<object> AllCategorias()
+        { 
+
+            var AllCategorias = categoriaDBCommand.sa_categorias("<root><accion>C</accion></root>");
             string json = JsonConvert.SerializeObject(AllCategorias);
-            List<CategoriaModelOutput> listaCategoria = JsonConvert.DeserializeObject<List<CategoriaModelOutput>>(json);
+            var resultado = JsonConvert.DeserializeObject(json);
+            
+   
+            return resultado;
 
-            return listaCategoria;
+
 
         }
 
-        public List<CategoriaModelInsertOutput> addCategoria()
+        //lo que va despues del public es el tipo de dato que retornas y lo que va entre parentesis es lo que resives.
+        public List<CategoriaModelResulInsertOutput> addCategoria(CategoriaModelInsertInput input)
         {
-            var AddCategoria = categoriaDBCommand.sa_categorias("<root><accion>I</accion><NB_DESCRIPCION>Monitores</NB_DESCRIPCION><NB_ESACTIVO>1</NB_ESACTIVO><ST_TELEFONO>23424578</ST_TELEFONO><NB_URLFOTO>FOTO</NB_URLFOTO><ST_FECHAREGISTRO>20260506</ST_FECHAREGISTRO></root>");
+            var AddCategoria = categoriaDBCommand.sa_categorias($"<root><accion>I</accion><NB_DESCRIPCION>{input.descripcion}</NB_DESCRIPCION><ST_ESACTIVO>{input.esActivo}</ST_ESACTIVO><FH_FECHAREGISTRO>{input.fechatRegistro}</FH_FECHAREGISTRO></root>");
             string json = JsonConvert.SerializeObject(AddCategoria);
-            List<CategoriaModelInsertOutput> listaCategoria = JsonConvert.DeserializeObject<List<CategoriaModelInsertOutput>>(json);
+            List<CategoriaModelResulInsertOutput> listaCategoria = JsonConvert.DeserializeObject<List<CategoriaModelResulInsertOutput>>(json);
 
             return listaCategoria;
         }
 
-        public List<CategoriaModelOutput> addCategoriaAll()
-        {
-            var AddCategoriALL = categoriaDBCommand.sa_categorias("<root><accion>I</accion><NB_DESCRIPCION>Mouse</NB_DESCRIPCION><NB_ESACTIVO>1</NB_ESACTIVO><ST_TELEFONO>23424578</ST_TELEFONO><NB_URLFOTO>FOTO</NB_URLFOTO><ST_FECHAREGISTRO>20260506</ST_FECHAREGISTRO></root>");
-            string json = JsonConvert.SerializeObject(AddCategoriALL);
-            List<CategoriaModelOutput> listaCategoriaAll = JsonConvert.DeserializeObject<List<CategoriaModelOutput>>(json);
-
-            return listaCategoriaAll;
-
-        }
+  
     }
 }

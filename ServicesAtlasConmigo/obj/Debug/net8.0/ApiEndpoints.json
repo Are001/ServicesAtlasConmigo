@@ -6,13 +6,19 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "AtlasLibraries.Model.CategoriaModelInsertInput",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ServicesAtlasConmigo.Controllers.CategoriaController",
-    "Method": "addCategoriaAll",
-    "RelativePath": "addCategoriaAll",
+    "ContainingType": "ServicesAtlasConmigo.Controllers.UsuarioController",
+    "Method": "AgregaUsuario",
+    "RelativePath": "AddUsuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

@@ -1,6 +1,8 @@
-﻿using AtlasLibraries.Services;
+﻿using AtlasLibraries.Model;
+using AtlasLibraries.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ServicesAtlasConmigo.Controllers
 {
@@ -18,28 +20,21 @@ namespace ServicesAtlasConmigo.Controllers
         [HttpGet]
         public IActionResult Categorias() 
         {
-            var output = _CategoriaServices.AllCategorias();
-            return Ok(output);
-
+            var r = _CategoriaServices.AllCategorias();
+            //return Content(JsonConvert.SerializeObject(r));
+            return Ok(r);
         }
 
         [Route("addCategoria")]
         [HttpPost]
-        public IActionResult AddCategorias()
+        public IActionResult AddCategorias(CategoriaModelInsertInput input)
         {
-            var output = _CategoriaServices.addCategoria();
-            return Ok(output);
+            var resultado = _CategoriaServices.addCategoria(input);
+            return Ok(resultado);
 
         }
 
-        [Route("addCategoriaAll")]
-        [HttpPost]
-        public IActionResult addCategoriaAll()
-        {
-            var output = _CategoriaServices.addCategoriaAll();
-            return Ok(output);
-
-        }
+     
 
     }
 }
