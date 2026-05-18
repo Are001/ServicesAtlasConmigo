@@ -27,7 +27,7 @@ namespace ServicesAtlasConmigo.Controllers
             //return Content(JsonConvert.SerializeObject(r));
             return Ok(resultado);
         }
-
+        //recuerdar checar json dinamic.
         [Route("addCategoria")]
         [HttpPost]
         public IActionResult AddCategorias(CategoriaModelInsertInput input)
