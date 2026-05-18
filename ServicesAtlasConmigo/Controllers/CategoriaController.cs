@@ -10,19 +10,22 @@ namespace ServicesAtlasConmigo.Controllers
     [ApiController]
     public class CategoriaController : ControllerBase
     {
+        //Instanciamos el servicio de categorias.
         public CategoriaServices _CategoriaServices;
 
+        //Creamos el contructor
         public CategoriaController(CategoriaServices categoriaServices ) {
             this._CategoriaServices = categoriaServices;
         }
 
-        [Route("consultaAllCategorias")]
+
+        [Route("ConsultaAllCategorias")]
         [HttpGet]
         public IActionResult Categorias() 
         {
-            var r = _CategoriaServices.AllCategorias();
+            var resultado = _CategoriaServices.AllCategorias();
             //return Content(JsonConvert.SerializeObject(r));
-            return Ok(r);
+            return Ok(resultado);
         }
 
         [Route("addCategoria")]

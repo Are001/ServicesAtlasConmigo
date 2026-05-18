@@ -19,7 +19,7 @@ namespace AtlasLibraries.Services
             this.categoriaDBCommand = CategoriasDBCommand;
         }
 
-        //como el                                lo que resive del input
+        
         public object AllCategorias()
         //public List<object> AllCategorias()
         { 
@@ -27,11 +27,7 @@ namespace AtlasLibraries.Services
             var AllCategorias = categoriaDBCommand.sa_categorias("<root><accion>C</accion></root>");
             string json = JsonConvert.SerializeObject(AllCategorias);
             var resultado = JsonConvert.DeserializeObject(json);
-            
-   
             return resultado;
-
-
 
         }
 
