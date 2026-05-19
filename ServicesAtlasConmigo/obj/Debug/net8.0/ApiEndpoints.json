@@ -28,7 +28,7 @@
   {
     "ContainingType": "ServicesAtlasConmigo.Controllers.CategoriaController",
     "Method": "Categorias",
-    "RelativePath": "consultaAllCategorias",
+    "RelativePath": "ConsultaAllCategorias",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

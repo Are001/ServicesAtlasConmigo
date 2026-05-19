@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServicesAtlasConmigo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0164c91f97dce80fc6a291a252f940e0c2d41a7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0ac475e95dda85d78293d2804fc224bfb8e0550")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServicesAtlasConmigo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServicesAtlasConmigo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
